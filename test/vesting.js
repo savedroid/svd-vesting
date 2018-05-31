@@ -72,10 +72,6 @@ contract('SvdVesting', (accounts) => {
     }
 
     describe('construction', async () => {
-        it('should be initialized with a valid address', async () => {
-            await expectRevert(SvdVesting.new());
-        });
-
         it('should be ownable', async () => {
             assert.equal(await trustee.owner(), accounts[0]);
         });
